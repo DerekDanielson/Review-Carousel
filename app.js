@@ -46,8 +46,15 @@ const randomBtn = document.querySelector('.random-btn');
 let currentItem = 0;
 
 
-// Load inital item
-window.addEventListener('DOMContentLoaded', function(){
-    const item = reviews[currentItem];
+// Load initial item
+window.addEventListener('DOMContentLoaded', showPerson(currentItem)); 
+
+
+// Show person based on item
+function showPerson(person){
+    const item = reviews[person];
     img.src = item.img;
-});
+    author.textContent = item.name;
+    job.textContent = item.job;
+    info.textContent = item.text;
+};
