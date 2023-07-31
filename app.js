@@ -46,3 +46,8 @@ const randomBtn = document.querySelector('.random-btn');
 let currentItem = 0;
 
 
+// Load inital item
+window.addEventListener('DOMContentLoaded', function(){
+    const item = reviews[currentItem];
+    img.src = item.img;
+});
