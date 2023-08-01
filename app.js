@@ -63,6 +63,9 @@ function showPerson(person){
 // Show next person
 nextBtn.addEventListener('click', function(){
     currentItem++;
+    if (currentItem > reviews.length -1){
+        currentItem = 0;
+    }
     showPerson(currentItem);
 });
 
@@ -70,5 +73,15 @@ nextBtn.addEventListener('click', function(){
 // Show previous person
 prevBtn.addEventListener('click', function(){
     currentItem--;
+    if (currentItem < reviews.length){
+        currentItem = 3;
+    }
+    showPerson(currentItem);
+});
+
+
+// Show random person
+randomBtn.addEventListener('click', function(){
+    currentItem = Math.floor(Math.random() * reviews.length);
     showPerson(currentItem);
 });
