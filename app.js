@@ -58,3 +58,12 @@ function showPerson(person){
     job.textContent = item.job;
     info.textContent = item.text;
 };
+
+
+// Show next person
+nextBtn.addEventListener('click', function(){
+    currentItem++;
+    showPerson(currentItem);
+});
+
+
